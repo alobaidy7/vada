@@ -1,0 +1,248 @@
+body {
+  font-family: "El Messiri", sans-serif;
+  background-color: #fff1f1;
+}
+
+/* Navbar Start */
+
+.navbar {
+  background: linear-gradient(
+    126.02deg,
+    rgba(141, 52, 119, 0.4) -47.44%,
+    rgba(241, 198, 211, 0.4) 69.84%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.desk-nav {
+  background: linear-gradient(
+    126.02deg,
+    rgba(141, 52, 119, 0.4) -47.44%,
+    rgba(241, 198, 211, 0.4) 69.84%
+  );
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-size {
+  width: 35px;
+  color: #fff1f1;
+}
+
+.nav-menu-color {
+  color: #fff1f1;
+}
+
+button svg {
+  color: #fff1f1;
+  width: 20px;
+}
+
+.vada-word-nav {
+  animation-name: example;
+  animation-duration: 1.5s;
+  transform: translateX(15px);
+}
+
+.vada-word-slogen {
+  animation-name: example2;
+  animation-duration: 2s;
+}
+
+@keyframes example {
+  from {
+    transform: translateX(-150px);
+  }
+
+  to {
+    transform: translateX(15px);
+  }
+}
+
+@keyframes example2 {
+  from {
+    transform: rotate(-90deg);
+  }
+
+  to {
+    transform: rotate(0);
+  }
+}
+
+/* Navbar End */
+
+/* Header */
+
+.header-rectangle {
+  background: linear-gradient(
+    126.02deg,
+    rgba(141, 52, 119, 0.7) -47.44%,
+    rgba(241, 198, 211, 0.7) 69.84%
+  );
+}
+
+.header {
+  background-image: url("../imgs/header\ background.JPG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* What make us differnet */
+
+.articles-bg {
+  background: linear-gradient(
+    126.02deg,
+    rgba(228, 163, 212, 0.7) -47.44%,
+    rgba(241, 198, 211, 0.7) 69.84%
+  );
+}
+
+.arte {
+  animation-name: art;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+@keyframes art {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.03);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Swiper */
+
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
+/* Swiper */
+.swiper {
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 40px 60px;
+}
+
+.parallax-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper-slide .title {
+  font-size: 41px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.swiper-slide .subtitle {
+  font-size: 21px;
+}
+
+.swiper-slide .text {
+  font-size: 14px;
+  max-width: 400px;
+  line-height: 1.3;
+}
+
+/* Founder */
+
+/* Testimonials */
+
+.swiper-container {
+  overflow: hidden;
+}
+
+.footer-bg {
+  background: linear-gradient(
+    304.67deg,
+    rgba(255, 228, 156, 0.8) -213.61%,
+    rgba(194, 149, 216, 0.8) 282.17%
+  );
+}
+
+.fasla {
+  height: 1px;
+  background: linear-gradient(
+    126.02deg,
+    rgba(228, 163, 212, 0.7) -47.44%,
+    rgba(241, 198, 211, 0.7) 69.84%
+  );
+}
+
+.testi-bg {
+  background: linear-gradient(
+    126.02deg,
+    rgba(228, 163, 212, 0.5) -47.44%,
+    rgba(241, 198, 211, 0.5) 69.84%
+  );
+}
+
+.divhight {
+  height: 520px;
+}
+
+.testt {
+  color: rgb(228, 163, 212);
+  text-shadow: 1px 1px 3px rgb(36 37 47 / 25%);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.lg-head-w {
+  height: 650px;
+}
+
+.select-bg {
+  background-color: #fff1f1;
+  outline: none;
+}
+
+.lg-div-h {
+  height: 3300px !important;
+}
+
+.nav-hover {
+  transition: all ease-in-out 0.3s !important;
+}
+
+.nav-hover:hover {
+  color: rgb(228, 163, 212) !important;
+}
+.gallery {
+  transition: all ease-in-out 0.3s !important;
+}
+.gallery:hover {
+  transform: translateY(-10px) !important;
+}

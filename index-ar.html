@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VADA Candles</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind -->
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+
+    <!-- Tailwind Slider -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/index.css" />
+
+    <style>
+      body {
+        font-family: "El Messiri", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar Start-->
+
+    <div
+      class="hidden lg:flex lg:items-center desk-nav lg:justify-between h-20 px-24 fixed w-full z-10 gap-10 xl:px-40"
+    >
+      <div class="logo">
+        <img
+          src="imgs/vada-word-svg.svg"
+          alt=""
+          class="vada-word-nav logo-size w-14"
+        />
+        <img
+          src="imgs/circle-logo-svg.svg"
+          alt=""
+          class="vada-word-slogen logo-size w-14"
+        />
+      </div>
+
+      <div class="flex items-center nav-menu-color gap-4 xl:gap-10">
+        <a href="#product" class="text-xl nav-hover">منتجاتنا</a>
+        <a href="#founder" class="text-xl nav-hover">المؤسس</a>
+        <a href="#testi" class="text-xl nav-hover">اراء زبائنا</a>
+        <a href="#contact" class="text-xl nav-hover">راسلنا</a>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <a href="#"
+          ><img
+            src="imgs/whatsapp-svgrepo-com 1.png"
+            alt=""
+            class="w-8 hover:w-10 transition-all"
+        /></a>
+        <a href="#"
+          ><img
+            src="imgs/instagram-svgrepo-com 1.png"
+            alt=""
+            class="w-8 hover:w-10 transition-all"
+        /></a>
+      </div>
+    </div>
+
+    <!-- Navbar End -->
+
+    <!-- Mobile Navbar Start -->
+
+    <div class="navbar h-14 px-8 fixed w-full z-10 md:h-20 md:px-14 lg:hidden">
+      <div class="logo">
+        <img
+          src="imgs/vada-word-svg.svg"
+          alt=""
+          class="vada-word-nav logo-size md:w-14"
+        />
+        <img
+          src="imgs/circle-logo-svg.svg"
+          alt=""
+          class="vada-word-slogen logo-size md:w-14"
+        />
+      </div>
+
+      <button id="menu" class="xl:hidden lg:hidden md:mr-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5 md:w-8 md:h-8"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <div
+      id="links"
+      class="hidden py-24 flex flex-col items-center justify-center pinkBG w-full pt-32"
+    >
+      <a href="#product" class="text-2xl md:text-3xl p-2">منتجاتنا</a>
+      <a href="#founder" class="text-2xl md:text-3xl p-2">عن المؤسس</a>
+      <a href="#testi" class="text-2xl md:text-3xl p-2">اراء زبائنا</a>
+      <a href="#contact" class="text-2xl md:text-3xl p-2">راسلنا</a>
+      <a href="index.html" class="text-xl md:text-3xl p-2">English</a>
+
+      <div class="flex justify-between items-center h-10 mt-16">
+        <img
+          src="imgs/logopng.png"
+          alt=""
+          class="w-12 md:w-16 md:mx-8"
+          data-aos="zoom-in"
+        />
+      </div>
+    </div>
+
+    <!-- Mobile Navbar End -->
+
+    <div class="overflow-hidden">
+      <!-- بداية الكونتينر -->
+
+      <!-- Header Start -->
+      <div class="header divhight flex justify-center">
+        <div
+          class="header-rectangle sm:h-96 md:head-w w-4/5 my-16 mt-20 rounded shadow-sm flex flex-col items-center justify-center px-4 text-center gap-4 md:mt-24 lg:mt-28 lg:lg-head-w lg:flex-row lg:px-20 lg:gap-16"
+        >
+          <!-- Fixed -->
+
+          <img
+            src="imgs/logosvg.svg"
+            alt=""
+            class="w-32 md:w-40"
+            data-aos="zoom-in"
+            data-aos-duration="500"
+          />
+
+          <div
+            data-aos="zoom-in"
+            data-aos-duration="700"
+            class="px-2 lg:text-left"
+          >
+            <h1 class="text-2xl text-white md:text-4xl lg:text-right">
+              VADA Candles
+            </h1>
+            <p class="text-gray-100 text-xl testt md:text-3xl md:mt-4">
+              متجر الكتروني لبيع شموع نباتية مميزة وصديقة للبيئة
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Header End -->
+
+      <!-- What's Make Us Different Start -->
+
+      <div class="px-8 flex flex-col items-center my-10 lg:mt-16">
+        <h1 data-aos="fade-left">
+          <b class="text-2xl text-gray-500 testt md:text-4xl"
+            >ما الذي يميزنا؟</b
+          >
+        </h1>
+
+        <div
+          class="flex flex-col items-center justify-between gap-8 arte mt-8 lg:gap-12 lg:flex-row lg:mt-16 lg:px-20 xl:px-32"
+        >
+          <article
+            class="h-64 md:h-96 w-3/4 flex flex-col items-center articles-bg rounded px-8 text-center mt-6 shadow-md lg:mt-0"
+            data-aos="flip-left"
+            data-aos-duration="500"
+          >
+            <img
+              src="imgs/quality-icon.png"
+              alt=""
+              class="w-10 md:w-20 md:mt-10 mt-8"
+            />
+            <h2 class="mt-2 text-xl text-gray-800 md:text-3xl md:mt-4">
+              الجودة
+            </h2>
+            <span class="arte hidden"></span>
+            <p class="mt-2 md:mt-4 text-gray-500 md:text-2xl">
+              جميع شموعنا مصنوعة من الصويا ونباتية %100
+            </p>
+          </article>
+
+          <article
+            class="h-64 md:h-96 w-3/4 flex flex-col items-center articles-bg rounded px-8 text-center shadow-md"
+            data-aos="flip-right"
+            data-aos-duration="400"
+          >
+            <img
+              src="imgs/handmade-icon.png"
+              alt=""
+              class="w-10 md:w-20 mt-8 md:mt-10"
+            />
+            <h2 class="mt-2 text-xl text-gray-800 md:text-3xl md:mt-4">
+              مصنوعة باليد
+            </h2>
+            <span class="arte hidden"></span>
+            <p class="mt-2 md:mt-4 text-gray-500 md:text-2xl">
+              جميع منتجاتنا مصنوعة بالايدي باحجام واشكال متميزة ومختلفة
+            </p>
+          </article>
+
+          <article
+            class="h-64 md:h-96 w-3/4 flex flex-col items-center articles-bg rounded px-8 text-center shadow-md"
+            data-aos="flip-left"
+            data-aos-duration="300"
+          >
+            <img
+              src="imgs/environment-icon.png"
+              alt=""
+              class="w-10 md:w-20 md:mt-10 mt-8"
+            />
+            <h2 class="mt-2 text-xl text-gray-800 md:text-3xl md:mt-4">امنة</h2>
+            <span class="arte hidden"></span>
+            <p class="mt-2 md:mt-4 text-gray-500 md:text-2xl">
+              امنة للغاية وصديقة للصحة والبيئة
+            </p>
+          </article>
+        </div>
+      </div>
+
+      <!-- What's Make Us Different End -->
+
+      <div
+        class="flex justify-between items-center h-10 mt-16 md:mt-24"
+        id="product"
+      >
+        <div
+          class="w-1/3 fasla md:w-1/2"
+          data-aos="fade-right"
+          data-aos-duration="800"
+        ></div>
+        <img
+          src="imgs/logopng.png"
+          alt=""
+          class="w-12 md:w-16 md:mx-8"
+          data-aos="zoom-in"
+        />
+        <div
+          class="w-1/3 fasla md:w-1/2"
+          data-aos="fade-left"
+          data-aos-duration="800"
+        ></div>
+      </div>
+
+      <!-- فاصلة -->
+
+      <!-- Our Product Start -->
+
+      <h2
+        data-aos="zoom-in"
+        data-aos-duration="400"
+        class="text-center mt-10 mb-8 md:mt-16"
+      >
+        <b class="text-2xl text-gray-500 testt md:text-4xl">منتجاتنا</b>
+      </h2>
+
+      <div
+        data-aos="fade-right"
+        data-aos-duration="500"
+        style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+        class="swiper mySwiper px-8 rounded-md md:py-32 lg:py-64"
+      >
+        <div
+          class="parallax-bg"
+          style="background-image: url(imgs/candel5.jpg)"
+          data-swiper-parallax="-23%"
+        ></div>
+        <div class="swiper-wrapper py-16 lg:py-0">
+          <div class="swiper-slide">
+            <div class="title" data-swiper-parallax="-300">
+              مصنوعة من الصويا
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="title" data-swiper-parallax="-300">عطور طبيعية</div>
+          </div>
+          <div class="swiper-slide">
+            <div class="title" data-swiper-parallax="-300">
+              مواد صحية ونباتية
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next px-8"></div>
+        <div class="swiper-button-prev px-8"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <!-- Our Product End -->
+
+      <!-- Candels Gallery Start -->
+
+      <div>
+        <div
+          class="mt-20 mb-8 md:mt-24"
+          data-aos="fade-left"
+          data-aos-duration="400"
+        >
+          <h2 class="text-center">
+            <b class="text-2xl text-gray-500 testt md:text-4xl">صور المنتجات</b>
+          </h2>
+        </div>
+
+        <div class="flex overflow-x-auto space-x-8 w-full py-4 lg:px-8">
+          <section class="flex-shrink-0">
+            <span
+              ><img
+                src="imgs/gallery/candel1.jpg"
+                class="w-40 md:w-64 lg:w-96 rounded border-2 brdrclr border-gray-300 ml-4 gallery"
+                alt=""
+            /></span>
+            <p class="text-center text-lg md:text-2xl mt-2 lg:text-4xl lg:mt-8">
+              جسم
+            </p>
+          </section>
+          <section class="flex-shrink-0">
+            <span
+              ><img
+                src="imgs/gallery/candel2.jpg"
+                class="w-40 md:w-64 lg:w-96 rounded border-2 brdrclr border-gray-300 gallery"
+                alt=""
+            /></span>
+            <p class="text-center text-lg md:text-2xl mt-2 lg:text-4xl lg:mt-8">
+              شموع منوعة
+            </p>
+          </section>
+          <section class="flex-shrink-0">
+            <span
+              ><img
+                src="imgs/gallery/candel3.jpg"
+                class="w-40 md:w-64 lg:w-96 rounded border-2 brdrclr border-gray-300 gallery"
+                alt=""
+            /></span>
+            <p class="text-center text-lg md:text-2xl mt-2 lg:text-4xl lg:mt-8">
+              اشكال مختلفة
+            </p>
+          </section>
+          <section class="flex-shrink-0">
+            <span
+              ><img
+                src="imgs/gallery/candel4.jpg"
+                class="w-40 md:w-64 lg:w-96 rounded border-2 brdrclr border-gray-300 gallery"
+                alt=""
+            /></span>
+            <p class="text-center text-lg md:text-2xl mt-2 lg:text-4xl lg:mt-8">
+              بابلز
+            </p>
+          </section>
+
+          <section class="flex-shrink-0">
+            <span
+              ><img
+                src="imgs/gallery/candel5.jpg"
+                class="w-40 md:w-64 lg:w-96 rounded border-2 brdrclr border-gray-300 mr-4 gallery"
+                alt=""
+            /></span>
+            <p class="text-center text-lg md:text-2xl mt-2 lg:text-4xl lg:mt-8">
+              اجسام ملونة
+            </p>
+          </section>
+        </div>
+      </div>
+
+      <!-- Candels Gallery End -->
+
+      <!-- Fasla -->
+      <div class="flex justify-between items-center h-10 mt-16" id="founder">
+        <div
+          class="w-1/3 fasla md:w-1/2"
+          data-aos="fade-right"
+          data-aos-duration="800"
+        ></div>
+        <img
+          src="imgs/logopng.png"
+          alt=""
+          class="w-12 md:w-16 md:mx-8"
+          data-aos="zoom-in"
+        />
+        <div
+          class="w-1/3 fasla md:w-1/2"
+          data-aos="fade-left"
+          data-aos-duration="800"
+        ></div>
+      </div>
+
+      <!-- Founder Start -->
+
+      <div class="flex flex-col items-center justify-center px-8">
+        <div
+          class="mt-10 mb-8 md:mt-16"
+          data-aos="fade-left"
+          data-aos-duration="400"
+        >
+          <h2 class="text-center">
+            <b class="text-2xl text-gray-500 testt md:text-4xl"
+              >صاحبة المشروع</b
+            >
+          </h2>
+        </div>
+
+        <div
+          class="flex flex-col items-center lg:flex-row lg:items-start lg:px-32 gap-0 md:gap-8 lg:mt-8 xl:gap-32"
+        >
+          <div
+            class="text-center lg:text-right"
+            data-aos="zoom-in-up"
+            data-aos-duration="400"
+          >
+            <h2>
+              <b class="text-gray-600 text-xl md:text-2xl lg:text-3xl"
+                >وفاء عبد الكريم كويز</b
+              >
+            </h2>
+            <p class="text-gray-800 text-lg md:text-xl mt-4 testt lg:text-2xl">
+              اني وفاء مهندسة مواد بوليمرية وبتروكيمياوية ومؤسسة مشروع فادا،
+              خلال دراستي عرفت اضرار البارافاين الي يستعمل باغلب الشموع الي يسبب
+              امراض خطيرة بمرور الوقت هذا كان سبب ان ابدي مشروع فادا لصناعة شموع
+              باستخدم شمع نباتي صديق للبيئة وآمن لصحة الانسان
+            </p>
+          </div>
+
+          <img
+            src="imgs/founder.JPG"
+            alt=""
+            class="rounded w-3/4 md:w-1/2 mt-8 lg:mt-0 lg:w-64"
+            data-aos="zoom-in"
+            data-aos-duration="400"
+          />
+        </div>
+      </div>
+
+      <!-- Founder End -->
+
+      <!-- Testimonials Start -->
+
+      <section class="body-font" id="testi">
+        <div class="container px-5 py-8 mx-auto">
+          <div class="mt-10 mb-8" data-aos="fade-left" data-aos-duration="400">
+            <h2 class="text-center">
+              <b class="text-2xl text-gray-500 testt md:text-4xl"
+                >اراء زبائنا</b
+              >
+            </h2>
+          </div>
+          <div class="flex flex-wrap -m-4 mt-8 lg:h-96 lg:px-20">
+            <div class="p-4 md:w-1/2 w-full">
+              <div
+                class="h-full testi-bg p-8 rounded"
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"
+                data-aos-duration="400"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  class="block w-5 h-5 text-gray-400 mb-4"
+                  viewBox="0 0 975.036 975.036"
+                >
+                  <path
+                    d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"
+                  ></path>
+                </svg>
+                <p
+                  class="leading-relaxed mb-6 text-gray-800 md:text-xl lg:text-2xl text-center lg:text-right"
+                >
+                  توفر فادا شموع نباتية من الصويا صحية وغير مؤذية, مصنوعة محلياً
+                  بحُب وبعطور مختلفة
+                </p>
+                <a class="inline-flex items-center">
+                  <img
+                    alt="testimonial"
+                    src="imgs/warrdhabib.jpg"
+                    class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
+                  />
+                  <span class="flex-grow flex flex-col pl-4">
+                    <span class="title-font font-medium text-gray-900"
+                      >@wardhabib</span
+                    >
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/2 w-full">
+              <div
+                class="h-full testi-bg p-8 rounded"
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"
+                data-aos-duration="400"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  class="block w-5 h-5 text-gray-400 mb-4"
+                  viewBox="0 0 975.036 975.036"
+                >
+                  <path
+                    d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"
+                  ></path>
+                </svg>
+                <p
+                  class="leading-relaxed mb-6 text-gray-800 md:text-xl lg:text-2xl text-center lg:text-right"
+                >
+                  بصفحتنا ندعم كل المنتجات المصنوعة من مواد طبيعية وبطريقة صحية
+                  وصديقة للبيئة, واليوم المنتج الي ندعمه مرتبط بالاسترخاء ...
+                  الحب ... السلام ... التأمل <br />&#10084;&#65039; شموع من
+                  الصويا
+                </p>
+                <a class="inline-flex items-center">
+                  <img
+                    alt="testimonial"
+                    src="imgs/healthybydr_sarah.jpg"
+                    class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
+                  />
+                  <span class="flex-grow flex flex-col pl-4">
+                    <span class="title-font font-medium text-gray-900"
+                      >@healthybydr_sarah</span
+                    >
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials End -->
+
+      <!-- Fasla -->
+
+      <div class="flex justify-between items-center h-10 mt-16" id="contact">
+        <div
+          class="w-1/3 fasla md:w-1/2"
+          data-aos="fade-right"
+          data-aos-duration="800"
+        ></div>
+        <img
+          src="imgs/logopng.png"
+          alt=""
+          class="w-12 md:w-16 md:mx-8"
+          data-aos="zoom-in"
+        />
+        <div
+          class="w-1/3 fasla md:w-1/2"
+          data-aos="fade-left"
+          data-aos-duration="800"
+        ></div>
+      </div>
+
+      <!-- Contact Us Start -->
+
+      <div>
+        <div
+          class="mt-10 mb-8"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="400"
+        >
+          <h2 class="text-center">
+            <b class="text-2xl text-gray-500 testt md:text-4xl">راسلنا</b>
+          </h2>
+        </div>
+
+        <div
+          class="flex flex-col lg:px-32 items-center gap-16 justify-between md:flex-row md:px-8 md:py-10 lg:justify-around"
+        >
+          <div
+            class="w-40 h-40 flex flex-col items-center justify-between lg:w-64 lg:h-64 lg:mb-10 a"
+            data-aos="fade-right"
+            data-aos-anchor-placement="top-bottom"
+            data-aos-duration="400"
+          >
+            <a href="tel:+9647728028697"
+              ><img
+                src="imgs/Whatsapp.png"
+                alt=""
+                class="w-40 h-40 md:w-64 md:h-64 lg:w-64 lg:h-64 b"
+            /></a>
+            <h3
+              class="text-center text-lg md:text-2xl md:mt-4 lg:text-3xl mt-2"
+            >
+              واتساب
+            </h3>
+          </div>
+
+          <div
+            class="w-40 h-40 flex flex-col items-center lg:w-64 lg:h-64 lg:mb-10 a"
+            data-aos="fade-left"
+            data-aos-anchor-placement="top-bottom"
+            data-aos-duration="400"
+          >
+            <a
+              href="https://instagram.com/vada.art?utm
+               "
+              ><img
+                src="imgs/Instagram.png"
+                alt=""
+                class="w-40 h-40 md:w-64 md:h-64 lg:w-64 lg:h-64 b"
+            /></a>
+            <h3
+              class="text-center text-lg md:text-2xl md:mt-4 lg:text-3xl mt-2"
+            >
+              انستكرام
+            </h3>
+          </div>
+
+          <div
+            class="w-40 h-40 flex flex-col items-center lg:w-64 lg:h-64 lg:mb-10 a"
+            data-aos="fade-left"
+            data-aos-anchor-placement="top-bottom"
+            data-aos-duration="400"
+          >
+            <a href="https://www.tiktok.com/@vada.art"
+              ><img
+                src="imgs/Tiktok.png"
+                alt=""
+                class="w-40 h-40 md:w-64 md:h-64 lg:w-64 lg:h-64 b"
+            /></a>
+            <h3
+              class="text-center text-lg md:text-2xl md:mt-4 lg:text-3xl mt-2"
+            >
+              تك توك
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Us End -->
+
+      <!-- Footer Start -->
+
+      <div class="flex flex-col items-center gap-8 footer-bg mt-10 px-8">
+        <div
+          class="lg:flex lg:items-center lg:gap-16 lg:px-16 lg:justify-between"
+        >
+          <img
+            src="imgs/logosvg.svg"
+            alt=""
+            class="w-20 mt-10 mr-auto md:w-32 lg:w-64"
+            data-aos="zoom-out-right"
+          />
+          <div data-aos="zoom-out-right">
+            <p class="md:text-2xl mt-4"><b>Email:</b> Vada@candles.com</p>
+            <p class="md:text-2xl"><b>Phone number:</b> 07728028697</p>
+          </div>
+          <p class="md:text-xl">
+            <b>Location:</b> Iraq / Baghdad / Karrada / Al Sinaa street /
+            National foundation for computers / Fourth floor
+          </p>
+        </div>
+
+        <div class="flex items-center gap-2 mr-auto lg:ml-auto lg:mr-20">
+          <a href="#"
+            ><img src="imgs/whatsapp-svgrepo-com 1.png" alt="" class="w-10"
+          /></a>
+          <a href="https://instagram.com/vada.art?utm"
+            ><img src="imgs/instagram-svgrepo-com 1.png" alt="" class="w-10"
+          /></a>
+          <a
+            href="index.html"
+            class="hidden lg:inline-block text-2xl md:text-xl px-4"
+            >English</a
+          >
+        </div>
+
+        <p class="text-center py-4 md:text-lg">
+          Copyright © 2022 VADA Candels. All rights reserved.
+        </p>
+      </div>
+
+      <!-- Footer End -->
+    </div>
+    <!-- نهاية الكونتينر -->
+
+    <script>
+      menu = document.getElementById("menu");
+      links = document.getElementById("links");
+
+      menu.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        links.classList.toggle("hidden");
+        if (links.classList.toggle("block")) {
+          window.scroll({
+            top: 0,
+            left: 0,
+            behavior: "smooth",
+          });
+        }
+      });
+    </script>
+
+    <script>
+      AOS.init();
+    </script>
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        speed: 600,
+        parallax: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+
+    <script>
+      /* Testimonial */
+      const swiper2 = new Swiper(".swiper-container", {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 32,
+        autoplay: {
+          delay: 8000,
+        },
+        navigation: {
+          nextEl: ".next-button",
+          prevEl: ".prev-button",
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 1.5,
+            centeredSlides: true,
+          },
+          1024: {
+            centeredSlides: false,
+            slidesPerView: 1.5,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
